@@ -66,6 +66,20 @@ class LaravelCache extends LaravelStorageProvider
     }
 
     /**
+     * Check if storage has a key and remove it
+     *
+     * @param $key
+     *
+     * @return bool
+     */
+    public function forget($key)
+    {
+        $this->checkForKey($key);
+
+        return $this->cache->forget($this->path.$key);
+    }
+
+    /**
      * @return void
      */
     protected function setMinutes() {

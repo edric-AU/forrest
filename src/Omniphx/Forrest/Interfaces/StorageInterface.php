@@ -31,4 +31,14 @@ interface StorageInterface
      * @return bool
      */
     public function has($key);
+
+    /**
+     * Check if storage has a key and remove it
+     *
+     * @param $key
+     *
+     * @return bool
+     */
+    public function forget($key);
+    
 }
