@@ -53,7 +53,7 @@ class TokenRepository implements RepositoryInterface {
 
         $this->verify();
 
-        return $this->storage->forget();
+        return $this->storage->forget('token');
     }
 
     private function verify() {
